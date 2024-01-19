@@ -1,14 +1,22 @@
-<script setup>
-import GridTemplate from "@/reusable/GridTemplate.vue";
-import {onMounted} from "vue";
+<script>
 
+export default {
+  methods: {
+    createNewRecipe() {
+      this.$router.push({
+        path: "/NeuesRezept"
+      })
+    }
+  },
+}
 
 </script>
 
 <template>
-  <GridTemplate :title="test"></GridTemplate>
+  <div>
+    <button @click="createNewRecipe()">Neues Rezept</button>
+  </div>
 </template>
 
 <style scoped>
-
 </style>
